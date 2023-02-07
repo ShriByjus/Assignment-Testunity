@@ -87,10 +87,7 @@ Cypress.Commands.add('requestQoutation', () => {
     qoutationRequest.clicKOnSaveQoutationButton.click();
     console.log('Requesting of Qoutation part is done ');
     cy.wait(5000)
-   let number = qoutationRequest.coptyIdentificationNo;
-   var priceValue = number.text().split(':').map(item => item.trim());
-            finalPrice = priceValue[1];
-            console.log(finalPrice);
+   
 })
 Cypress.Commands.add('retriveQoutation', () => {
     retriveRequest.selectRetriveQoutation.click();
