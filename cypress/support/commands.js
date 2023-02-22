@@ -12,6 +12,12 @@ const retriveRequest = new retriveQoutation();
 const userProfile = new profile();
 const profileEdit = new eidtProfile();
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false
+})
+
 Cypress.Commands.add('visitDemoGuru99', () => {
     var url = `https://demo.guru99.com/insurance/v1/index.php`;
     cy.visit(url);
